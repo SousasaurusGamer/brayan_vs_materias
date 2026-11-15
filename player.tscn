@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cpj5a0y8ja30x"]
+
+[ext_resource type="Script" uid="uid://xyquukjvjvc4" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://ddkk1tpmkpmpv" path="res://movimiento el personaje.png" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://cf1m0k6503c7m" path="res://disparo del personaje.png" id="3_hqtel"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_op1xx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_i3pqv")
+}],
+"loop": 1,
+"name": &"move",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hqtel")
+}],
+"loop": 2,
+"name": &"shoot",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmatr"]
+size = Vector2(60, 100)
+
+[node name="player" type="CharacterBody2D" unique_id=1169899599]
+script = ExtResource("1_4flbx")
+
+[node name="skin" type="AnimatedSprite2D" parent="." unique_id=1060911092]
+scale = Vector2(0.09096692, 0.10835837)
+sprite_frames = SubResource("SpriteFrames_op1xx")
+animation = &"move"
+
+[node name="hitbox" type="CollisionShape2D" parent="." unique_id=1875222473]
+shape = SubResource("RectangleShape2D_kmatr")
+
+[node name="ShootPoint" type="Marker2D" parent="." unique_id=2045401286]
+position = Vector2(35, -35)
+
+[node name="ShootCooldown" type="Timer" parent="." unique_id=863192871]
+one_shot = true

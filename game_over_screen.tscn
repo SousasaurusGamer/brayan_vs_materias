@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://uc11rb82oy2y"]
+
+[ext_resource type="Script" uid="uid://0j332g5smudh" path="res://game_over_screen.gd" id="1_gt22q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p1glp"]
+bg_color = Color(3.85046e-07, 0.80703527, 0.32686356, 0.5529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gt22q"]
+bg_color = Color(0.23537049, 0.23537055, 0.23537043, 1)
+
+[node name="GameOverScreen" type="Control" unique_id=1968286485]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gt22q")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1522498545]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.04731214, 0.03752934, 0.09616537, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2070300437]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=645673223]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1977185854]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6313726, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="Description" type="Label" parent="CenterContainer/VBoxContainer" unique_id=940044286]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.81048864, 0.3583803, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "HAS PERDIDO"
+horizontal_alignment = 1
+
+[node name="UpgradeInfo" type="Label" parent="CenterContainer/VBoxContainer" unique_id=510139280]
+layout_mode = 2
+text = "Mejora tu salud maxima + 20"
+horizontal_alignment = 1
+
+[node name="UpgradeHealthButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1437141787]
+modulate = Color(0.14901961, 0.827451, 1, 1)
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.41825426, 0.9441355, 7.70092e-07, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_p1glp")
+text = "MEJORA DE SALUD +20"
+
+[node name="RestartButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=717648016]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_gt22q")
+text = "REINTENTAR"

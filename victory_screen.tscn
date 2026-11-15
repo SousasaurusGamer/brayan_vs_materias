@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://l823aruhkrc1"]
+
+[ext_resource type="Script" uid="uid://dyilh3k5vkyb6" path="res://victory_screen.gd" id="1_rbj82"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xqf5"]
+bg_color = Color(0, 0.41686258, 0.1024164, 1)
+
+[node name="VictoryScreen" type="Control" unique_id=2084421212]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rbj82")
+
+[node name="Background" type="ColorRect" parent="." unique_id=688253510]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.050708726, 0.14733289, 0.14733289, 0.82800007)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=404004675]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1229621384]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer" unique_id=4342162]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.9270505, 0.9277464, 1)
+theme_override_font_sizes/font_size = 48
+text = "¡VICTORIA!"
+horizontal_alignment = 1
+
+[node name="Description" type="Label" parent="CenterContainer/VBoxContainer" unique_id=560328727]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "¡APROBASTE MATEMATICAS!"
+horizontal_alignment = 1
+
+[node name="Message" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1746953548]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "¡Has derrotado  al examen!"
+horizontal_alignment = 1
+
+[node name="RestartButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=354559617]
+custom_minimum_size = Vector2(300, 55)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.032554056, 0.005430397, 0, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_0xqf5")
+text = "VOLVER A JUGAR"

@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://do2450g70ykn2"]
+
+[ext_resource type="Script" uid="uid://di5pnkul62tac" path="res://enemies/exam_boss.gd" id="1_8bn3o"]
+[ext_resource type="Texture2D" uid="uid://cjv5fmnurrdhe" path="res://boss.2.png" id="1_aopyr"]
+[ext_resource type="PackedScene" uid="uid://gscqp6dg4rrl" path="res://enemies/formula_proyectil.tscn" id="2_hc4ps"]
+[ext_resource type="Texture2D" uid="uid://dxc13uac04egu" path="res://formulas/proyectil-1.png" id="3_kbm2u"]
+[ext_resource type="Texture2D" uid="uid://cep6tjw7rsyf0" path="res://formulas/proyectil-2.png" id="4_mgja7"]
+[ext_resource type="Texture2D" uid="uid://bojnexwmpwp1o" path="res://formulas/proyectil-3.png" id="5_bkew5"]
+[ext_resource type="Texture2D" uid="uid://doq887kqmv8j7" path="res://formulas/proyectil-4.png" id="6_ywwui"]
+[ext_resource type="Texture2D" uid="uid://c7qisvm51qt7r" path="res://formulas/proyectil-5.png" id="7_oslq8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_op1xx"]
+size = Vector2(390, 493)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmatr"]
+bg_color = Color(0.98714256, 0.1931151, 0.19966345, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="ExamBoss" type="StaticBody2D" unique_id=2090031548]
+collision_layer = 9
+script = ExtResource("1_8bn3o")
+projectile_scene = ExtResource("2_hc4ps")
+formula_textures = Array[Texture2D]([ExtResource("3_kbm2u"), ExtResource("4_mgja7"), ExtResource("5_bkew5"), ExtResource("6_ywwui"), ExtResource("7_oslq8")])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=28557444]
+scale = Vector2(0.57744366, 0.6584507)
+texture = ExtResource("1_aopyr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1250177011]
+shape = SubResource("RectangleShape2D_op1xx")
+
+[node name="SpawnPoint" type="Marker2D" parent="." unique_id=139214111]
+position = Vector2(-230, 0)
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=510119893]
+
+[node name="BossHealthBar" type="ProgressBar" parent="." unique_id=1932751576]
+custom_minimum_size = Vector2(240, 25)
+offset_left = -120.0
+offset_top = -300.0
+offset_right = 120.0
+offset_bottom = -273.0
+theme_override_colors/font_color = Color(6.1806764e-05, 6.180692e-05, 6.1807215e-05, 1)
+theme_override_styles/fill = SubResource("StyleBoxFlat_kmatr")
+value = 100.0
