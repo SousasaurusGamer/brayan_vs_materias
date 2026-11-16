@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://l823aruhkrc1"]
 
 [ext_resource type="Script" uid="uid://dyilh3k5vkyb6" path="res://victory_screen.gd" id="1_rbj82"]
+[ext_resource type="Texture2D" uid="uid://cdnedsff6fe7j" path="res://fondo de los niveles/fondo de victoria.png" id="2_qyds8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xqf5"]
 bg_color = Color(0, 0.41686258, 0.1024164, 1)
@@ -14,14 +15,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rbj82")
 
-[node name="Background" type="ColorRect" parent="." unique_id=688253510]
+[node name="Background" type="TextureRect" parent="." unique_id=1273601667]
+z_index = -1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.050708726, 0.14733289, 0.14733289, 0.82800007)
+mouse_filter = 2
+texture = ExtResource("2_qyds8")
+expand_mode = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=404004675]
 layout_mode = 1
