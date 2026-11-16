@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjv5fmnurrdhe"
-path="res://.godot/imported/boss.2.png-198e227ef6b5301dfde0fceea9846490.ctex"
+uid="uid://cdnedsff6fe7j"
+path="res://.godot/imported/fondo de victoria.png-02261b47cd74c1ce1131a78dd53cf55c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://boss.2.png"
-dest_files=["res://.godot/imported/boss.2.png-198e227ef6b5301dfde0fceea9846490.ctex"]
+source_file="res://fondo de los niveles/fondo de victoria.png"
+dest_files=["res://.godot/imported/fondo de victoria.png-02261b47cd74c1ce1131a78dd53cf55c.ctex"]
 
 [params]
 

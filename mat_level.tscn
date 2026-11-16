@@ -1,9 +1,11 @@
 [gd_scene format=4 uid="uid://c1jpq6l7t31r8"]
 
+[ext_resource type="Texture2D" uid="uid://bwsrb4u8nuxoi" path="res://fondo de los niveles/fondo del nivel de mate.png" id="1_l7vcw"]
 [ext_resource type="PackedScene" uid="uid://cpj5a0y8ja30x" path="res://player.tscn" id="1_o2aph"]
 [ext_resource type="PackedScene" uid="uid://do2450g70ykn2" path="res://enemies/exam_boss.tscn" id="2_2qerl"]
 [ext_resource type="Texture2D" uid="uid://g205y41syoy4" path="res://PNG/floor_wood_planks_wide_depth.png" id="2_w470d"]
 [ext_resource type="Texture2D" uid="uid://bmgd586ymtkvp" path="res://PNG/floor_wood_planks_wide_damaged.png" id="3_2qerl"]
+[ext_resource type="Texture2D" uid="uid://drykywxo4tcew" path="res://PNG/timber_square_planks_diagonal.png" id="4_l7vcw"]
 [ext_resource type="Texture2D" uid="uid://pvipso380ytd" path="res://PNG/floor_wood_planks_wide.png" id="4_qx2c7"]
 [ext_resource type="Script" uid="uid://nvve6fisg268" path="res://hud.gd" id="6_2qerl"]
 
@@ -86,10 +88,22 @@ sources/0 = SubResource("TileSetAtlasSource_l7vcw")
 sources/1 = SubResource("TileSetAtlasSource_ynhm0")
 sources/2 = SubResource("TileSetAtlasSource_6tvy6")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qx2c7"]
+bg_color = Color(0, 0.59463626, 0, 1)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kmatr"]
 size = Vector2(30, 600)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_op1xx"]
+size = Vector2(63, 64)
+
 [node name="MatLevel" type="Node2D" unique_id=78855801]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1156261174]
+z_index = -10
+position = Vector2(571.5, 323)
+scale = Vector2(0.6947304, 0.6571428)
+texture = ExtResource("1_l7vcw")
 
 [node name="player" parent="." unique_id=1169899599 instance=ExtResource("1_o2aph")]
 position = Vector2(71, 517)
@@ -109,6 +123,7 @@ offset_right = 220.0
 offset_bottom = 28.0
 offset_transform_enabled = true
 offset_transform_position = Vector2(20, 20)
+theme_override_styles/fill = SubResource("StyleBoxFlat_qx2c7")
 value = 100.0
 
 [node name="LeftWall" type="StaticBody2D" parent="." unique_id=1367396132]
@@ -116,3 +131,53 @@ value = 100.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall" unique_id=1339711695]
 position = Vector2(-2, 282)
 shape = SubResource("RectangleShape2D_kmatr")
+
+[node name="Platforms" type="Node2D" parent="." unique_id=525684924]
+
+[node name="Platform01" type="StaticBody2D" parent="Platforms" unique_id=39264577]
+collision_layer = 16
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform01" unique_id=1153416799]
+position = Vector2(177, 445)
+texture = ExtResource("4_l7vcw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform01" unique_id=865286117]
+position = Vector2(179, 445)
+shape = SubResource("RectangleShape2D_op1xx")
+one_way_collision = true
+
+[node name="Platform02" type="StaticBody2D" parent="Platforms" unique_id=1095670729]
+collision_layer = 16
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform02" unique_id=1987289897]
+position = Vector2(409, 186)
+texture = ExtResource("4_l7vcw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform02" unique_id=1205544229]
+position = Vector2(409, 187)
+shape = SubResource("RectangleShape2D_op1xx")
+one_way_collision = true
+
+[node name="Platform03" type="StaticBody2D" parent="Platforms" unique_id=518627865]
+collision_layer = 16
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform03" unique_id=159601373]
+position = Vector2(469, 389)
+texture = ExtResource("4_l7vcw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform03" unique_id=1689908113]
+position = Vector2(465, 391)
+shape = SubResource("RectangleShape2D_op1xx")
+one_way_collision = true
+
+[node name="Platform04" type="StaticBody2D" parent="Platforms" unique_id=1532685505]
+collision_layer = 16
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform04" unique_id=2023306420]
+position = Vector2(293, 306)
+texture = ExtResource("4_l7vcw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform04" unique_id=74603603]
+position = Vector2(292, 306)
+shape = SubResource("RectangleShape2D_op1xx")
+one_way_collision = true

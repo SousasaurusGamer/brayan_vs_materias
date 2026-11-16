@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvsh2m8ephjf7"
-path="res://.godot/imported/boss.png-9eb81b69280b4a72a382c092a5434018.ctex"
+uid="uid://d2xqub5ttkqj0"
+path="res://.godot/imported/formula 3.png-a20fde1537663f29f4d09c669d288975.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://boss.png"
-dest_files=["res://.godot/imported/boss.png-9eb81b69280b4a72a382c092a5434018.ctex"]
+source_file="res://formulas/formula 3.png"
+dest_files=["res://.godot/imported/formula 3.png-a20fde1537663f29f4d09c669d288975.ctex"]
 
 [params]
 

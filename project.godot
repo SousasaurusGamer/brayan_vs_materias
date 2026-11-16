@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Brayan vs Materias"
-run/main_scene="uid://c1jpq6l7t31r8"
+run/main_scene="uid://bxgwlp0hmiwdd"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

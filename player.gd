@@ -5,11 +5,12 @@ signal health_changed(current_health: int, maximum_health: int)
 signal died
 
 @export var speed: float = 250.0
-@export var jump_velocity: float = -550.0
+@export var jump_velocity: float = -600.0
 @export var max_health: int = 100
 
 @export var shot_speed: float = 500.0
-@export var shot_damage: int = 20
+@export var shot_damage: int = 10
+
 
 const PROJECTILE_SCENE: PackedScene = preload(
     "res://enemies/formula_proyectil.tscn"

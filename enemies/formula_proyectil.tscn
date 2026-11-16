@@ -1,21 +1,23 @@
 [gd_scene format=3 uid="uid://gscqp6dg4rrl"]
 
 [ext_resource type="Script" uid="uid://bb5h4offmh572" path="res://enemies/formula_proyectil.gd" id="1_rtg76"]
-[ext_resource type="Texture2D" uid="uid://dxc13uac04egu" path="res://formulas/proyectil-1.png" id="1_t4pof"]
+[ext_resource type="Texture2D" uid="uid://cbxhkfj6y7t7h" path="res://formulas/formula 2.png" id="2_rtg76"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kmatr"]
-size = Vector2(137, 36)
+size = Vector2(342, 82)
 
 [node name="formulaProyectil" type="Area2D" unique_id=2027007821]
 collision_layer = 4
 script = ExtResource("1_rtg76")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1684037514]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_t4pof")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_rtg76")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1974680750]
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_kmatr")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=804890601]
-rect = Rect2(-69, -18, 138, 36)
+position = Vector2(71, -10)
+rect = Rect2(-238, -29, 335, 78)

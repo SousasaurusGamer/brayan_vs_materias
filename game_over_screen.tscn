@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://uc11rb82oy2y"]
 
 [ext_resource type="Script" uid="uid://0j332g5smudh" path="res://game_over_screen.gd" id="1_gt22q"]
+[ext_resource type="Texture2D" uid="uid://cgaupqanvwlcx" path="res://fondo de los niveles/fondo de derrota.png" id="2_w3hxg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p1glp"]
 bg_color = Color(3.85046e-07, 0.80703527, 0.32686356, 0.5529412)
@@ -17,14 +18,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gt22q")
 
-[node name="Background" type="ColorRect" parent="." unique_id=1522498545]
+[node name="Background" type="TextureRect" parent="." unique_id=1678018809]
+z_index = -1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.04731214, 0.03752934, 0.09616537, 1)
+mouse_filter = 2
+texture = ExtResource("2_w3hxg")
+expand_mode = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=2070300437]
 layout_mode = 1

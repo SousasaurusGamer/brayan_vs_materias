@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://do2450g70ykn2"]
 
 [ext_resource type="Script" uid="uid://di5pnkul62tac" path="res://enemies/exam_boss.gd" id="1_8bn3o"]
-[ext_resource type="Texture2D" uid="uid://cjv5fmnurrdhe" path="res://boss.2.png" id="1_aopyr"]
 [ext_resource type="PackedScene" uid="uid://gscqp6dg4rrl" path="res://enemies/formula_proyectil.tscn" id="2_hc4ps"]
-[ext_resource type="Texture2D" uid="uid://dxc13uac04egu" path="res://formulas/proyectil-1.png" id="3_kbm2u"]
-[ext_resource type="Texture2D" uid="uid://cep6tjw7rsyf0" path="res://formulas/proyectil-2.png" id="4_mgja7"]
-[ext_resource type="Texture2D" uid="uid://bojnexwmpwp1o" path="res://formulas/proyectil-3.png" id="5_bkew5"]
-[ext_resource type="Texture2D" uid="uid://doq887kqmv8j7" path="res://formulas/proyectil-4.png" id="6_ywwui"]
-[ext_resource type="Texture2D" uid="uid://c7qisvm51qt7r" path="res://formulas/proyectil-5.png" id="7_oslq8"]
+[ext_resource type="Texture2D" uid="uid://g8ybvjqei4k3" path="res://formulas/formula 1.png" id="3_hc4ps"]
+[ext_resource type="Texture2D" uid="uid://cbxhkfj6y7t7h" path="res://formulas/formula 2.png" id="4_kbm2u"]
+[ext_resource type="Texture2D" uid="uid://b2r1ged14d7ym" path="res://formulas/formula 4.png" id="6_bkew5"]
+[ext_resource type="Texture2D" uid="uid://bk72jwtprkav3" path="res://formulas/formula 7.png" id="6_hc4ps"]
+[ext_resource type="Texture2D" uid="uid://dua8x1ouk3j7v" path="res://formulas/formula 6.png" id="7_kbm2u"]
+[ext_resource type="Texture2D" uid="uid://dbl6bk8juc73p" path="res://jefe.png" id="8_hc4ps"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_op1xx"]
 size = Vector2(390, 493)
@@ -23,11 +23,12 @@ corner_radius_bottom_left = 6
 collision_layer = 9
 script = ExtResource("1_8bn3o")
 projectile_scene = ExtResource("2_hc4ps")
-formula_textures = Array[Texture2D]([ExtResource("3_kbm2u"), ExtResource("4_mgja7"), ExtResource("5_bkew5"), ExtResource("6_ywwui"), ExtResource("7_oslq8")])
+formula_textures = Array[Texture2D]([ExtResource("3_hc4ps"), ExtResource("4_kbm2u"), ExtResource("6_bkew5"), ExtResource("6_hc4ps"), ExtResource("7_kbm2u")])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=28557444]
-scale = Vector2(0.57744366, 0.6584507)
-texture = ExtResource("1_aopyr")
+position = Vector2(21, 2)
+scale = Vector2(0.47648263, 0.5561238)
+texture = ExtResource("8_hc4ps")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1250177011]
 shape = SubResource("RectangleShape2D_op1xx")
