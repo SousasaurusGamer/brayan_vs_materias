@@ -1,0 +1,16 @@
+BRAYAN VS MATERIAS - INGLES - MIRANDO A LA IZQUIERDA
+
+Los mismos sprites de canto anteriores, invertidos horizontalmente, sin cambiar estilo ni expresiones.
+5 animaciones: starty (quieto), left, down, up, right.
+Cada una tiene 4 cuadros PNG RGBA de 352 x 288 px, fondo transparente.
+Los cuadros conservan la misma alineacion vertical de los pies.
+
+Godot 4.7.2:
+1) Copia las carpetas dentro de res://personaje/brayan_ingles/
+2) Abre english_level.tscn y selecciona Stage > Brayan (AnimatedSprite2D)
+3) En SpriteFrames sustituye los frames por los 4 PNG de la carpeta que corresponde.
+4) Usa starty, left, down, up, right; starty con Loop activado.
+5) En el Inspector comprueba Flip H desactivado.
+6) Deja Scale y Position fijos para todas las animaciones.
+
+Si tienes ya el ZIP de animaciones mirando a la derecha importado a Godot, puedes simplemente activar Flip H en Brayan y no necesitas reemplazar los PNG.

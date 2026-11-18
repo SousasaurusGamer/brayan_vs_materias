@@ -64,4 +64,5 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.032554056, 0.005430397, 0, 1)
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_0xqf5")
-text = "VOLVER A JUGAR"
+text = "SIGUIENTE NIVEL
+"

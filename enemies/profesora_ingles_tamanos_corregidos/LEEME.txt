@@ -1,0 +1,21 @@
+PROFESORA - ANIMACIONES PARA BRAYAN VS MATERIAS (Godot 4.7.2)
+
+Referencia: right (primera imagen recibida).
+Animaciones ajustadas: starty (quieto) y down (abajo).
+Animaciones de referencia conservadas: right, left, up.
+
+Todos los PNG individuales tienen lienzo transparente de 352x288 px.
+Todas las hojas de sprites tienen 4 cuadros de 352x288 px (1408x288).
+Los zapatos estan alineados en la misma posicion; los dibujos tienen una altura visual similar.
+La profesora mira a la derecha en las poses starty y down.
+
+COMO IMPORTAR EN GODOT:
+1. Descomprime esta carpeta dentro de res://personaje/.
+2. Selecciona Teacher (AnimatedSprite2D) en english_level.tscn.
+3. Abre Sprite Frames.
+4. Para cada animacion, sustituye sus cuadros viejos por los PNG de la carpeta correspondiente.
+5. Si importas una hoja *_spritesheet.png con la herramienta de rejilla, usa 4 columnas x 1 fila.
+6. Usa el MISMO Scale del nodo Teacher en todas las animaciones.
+7. En tus capturas la animacion de quieto se llama starty: usa esa carpeta para la animacion starty.
+
+Esta operacion no requiere cambiar scripts y mantiene los archivos fuente originales.

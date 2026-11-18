@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://bd3c12vyi2llq"]
+
+[ext_resource type="Script" uid="uid://lgqaxjlknmvq" path="res://english_victory.gd" id="1_p8les"]
+[ext_resource type="Texture2D" uid="uid://dttbxklmmdrbu" path="res://fondo de los niveles/fondo victoria ing.png" id="2_6h61r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5g7lw"]
+bg_color = Color(2.4065375e-07, 0.36003378, 0.53163195, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dww1r"]
+bg_color = Color(0.2483995, 0.7149781, 0, 1)
+
+[node name="EnglishVictory" type="Control" unique_id=644112578]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p8les")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2120787209]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_6h61r")
+expand_mode = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=405553117]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=931188435]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer" unique_id=547306651]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.019607844, 1, 1, 1)
+theme_override_font_sizes/font_size = 48
+text = "¡VICTORIA!"
+horizontal_alignment = 1
+
+[node name="Message" type="Label" parent="CenterContainer/VBoxContainer" unique_id=347987531]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "¡Brayan derrotó a la profesora de Inglés!
+
+"
+horizontal_alignment = 1
+
+[node name="ReplayButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1240113060]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_5g7lw")
+text = "Volver a jugar Inglés"
+
+[node name="MenuButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1051754028]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_dww1r")
+text = "Menú principal"
