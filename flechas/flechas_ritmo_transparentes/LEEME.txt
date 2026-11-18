@@ -1,0 +1,9 @@
+FLECHAS PARA BRAYAN VS MATERIAS - NIVEL INGLES
+
+ARCHIVOS PRINCIPALES: 64px/arrow_left.png, arrow_down.png, arrow_up.png, arrow_right.png
+Todos los PNG tienen 64x64 pixeles, fondo realmente transparente (RGBA).
+Se incluyen archivos 128px por si necesitas mayor resolucion.
+Los spritesheets contienen las cuatro flechas en orden LEFT, DOWN, UP, RIGHT.
+Para Godot 4.7.2: arrastra cada PNG de 64px a la propiedad Texture de su TextureRect.
+Usa Size de 64x64 y Expand Mode Ignore Size; mantén el mismo tamano en las cuatro.
+NO uses la imagen de vista previa con cuadrícula como textura de juego.
